@@ -1,6 +1,10 @@
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { createProduct, updateProduct } from "@/services/apiProducts";
+import PropTypes from "prop-types";
+import toast from "react-hot-toast";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -14,9 +18,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import toast from "react-hot-toast";
-import { createProduct, updateProduct } from "@/services/apiProducts";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const formSchema = z.object({
   title: z.string().nonempty("請輸入標題"),
@@ -305,3 +306,5 @@ function ProductForm({ product, setOpen }) {
 }
 
 export default ProductForm;
+
+ProductForm.propTypes = { product: PropTypes.object, setOpen: PropTypes.func };

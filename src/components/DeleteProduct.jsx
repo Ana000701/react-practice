@@ -1,6 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteProduct } from "@/services/apiProducts";
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 import {
   Dialog,
   DialogContent,
@@ -48,3 +50,8 @@ function DeleteProduct({ product }) {
 }
 
 export default DeleteProduct;
+
+DeleteProduct.propTypes = {
+  product: PropTypes.object,
+  setOpen: PropTypes.func,
+};

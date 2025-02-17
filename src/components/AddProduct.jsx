@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Dialog,
   DialogContent,
@@ -7,7 +9,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ProductForm from "./ProductForm";
-import { useState } from "react";
 
 function AddProduct() {
   const [open, setOpen] = useState(false);

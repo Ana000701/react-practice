@@ -1,3 +1,5 @@
+import { useState } from "react";
+import PropTypes from "prop-types";
 import {
   Dialog,
   DialogContent,
@@ -7,7 +9,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ProductForm from "./ProductForm";
-import { useState } from "react";
 
 function UpdateProduct({ product }) {
   const [open, setOpen] = useState(false);
@@ -33,3 +34,5 @@ function UpdateProduct({ product }) {
 }
 
 export default UpdateProduct;
+
+UpdateProduct.propTypes = { product: PropTypes.object };
