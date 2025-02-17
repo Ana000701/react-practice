@@ -15,7 +15,7 @@ function App() {
       <ReactQueryDevtools />
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/react-practice/' element={<Home />} />
           <Route path='login' element={<Login />} />
           <Route path='products' element={<ProductList />} />
         </Routes>
