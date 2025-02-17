@@ -9,7 +9,7 @@ function Header() {
           <nav>
             <ul className='flex items-center gap-2  '>
               <li>
-                <Link to='/'>首頁</Link>
+                <Link to='/react-practice/'>首頁</Link>
               </li>
             </ul>
           </nav>
